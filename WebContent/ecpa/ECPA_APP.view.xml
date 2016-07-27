@@ -1,0 +1,65 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:layout="sap.ui.layout" controllerName="ecpa.ECPA_APP"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+			<Panel expandable="true" expanded="false" width="auto"
+				class="sapUiResponsiveMargin">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="Building Model"></Title>
+						<ToolbarSpacer></ToolbarSpacer>
+						<Button icon="sap-icon://building"></Button>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<layout:VerticalLayout>
+						<layout:HorizontalLayout>
+							<Label text="Master Data Group"
+								class="sapUiMediumMargin"></Label>
+							<MultiComboBox width="400px" class="sapUiSmallMargin">
+								<core:Item key="0" text="All" />
+								<core:Item key="1" text="Solar" />
+								<core:Item key="2" text="Non-Solar" />
+							</MultiComboBox>
+						</layout:HorizontalLayout>
+						<layout:HorizontalLayout>
+							<Label text="Characteristic Value Group"
+								class="sapUiMediumMargin"></Label>
+							<MultiComboBox width="400px" class="sapUiSmallMargin">
+								<core:Item key="0" text="All" />
+								<core:Item key="1" text="(A:2,C:0,AC:1,H:0,HWM:1)" />
+								<core:Item key="2" text="(A:2,C:1,AC:1,H:0,HWM:1)" />
+							</MultiComboBox>
+						</layout:HorizontalLayout>
+						<layout:HorizontalLayout>
+							<Label text="Date Period" class="sapUiMediumMargin"></Label>
+							<DateRangeSelection delimiter="-"
+								displayFormat="yyyy/MM/dd" class="sapUiSmallMargin"></DateRangeSelection>
+						</layout:HorizontalLayout>
+					</layout:VerticalLayout>
+				</content>
+			</Panel>
+			<Panel expandable="true" expanded="false" width="auto"
+				class="sapUiResponsiveMargin">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="Predictive Analytics"></Title>
+						<ToolbarSpacer></ToolbarSpacer>
+						<Button icon="sap-icon://present"></Button>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<layout:VerticalLayout>
+						<layout:HorizontalLayout>
+							<Label text="Predict Date" class="sapUiMediumMargin"></Label>
+							<DatePicker class="sapUiSmallMargin"></DatePicker>
+						</layout:HorizontalLayout>
+					</layout:VerticalLayout>
+				</content>
+			</Panel>
+			<mvc:HTMLView viewName="ecpa.SVG_HTML">
+			</mvc:HTMLView>
+		</content>
+	</Page>
+</core:View>
